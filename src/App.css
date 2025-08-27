@@ -1,0 +1,15 @@
+.App {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  width: 100%;
+}
+
+/* 暗色模式 */
+.dark .App {
+  background-color: #111827;
+}
+
+main {
+  width: 100%;
+  box-sizing: border-box;
+}
