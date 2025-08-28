@@ -1,8 +1,8 @@
 import React from 'react';
-import { useI18n } from '../contexts/I18nContext';
-import { useAutoTranslation } from '../utils/autoI18n';
-import AutoTranslatedText from '../components/AutoTranslatedText';
-import { containsChinese, detectChineseTexts } from '../utils/autoI18n';
+import { useI18n } from '../../contexts/I18nContext';
+import { useAutoTranslation } from '../../utils/autoI18n';
+import AutoTranslatedText from '../../components/AutoTranslatedText';
+import { containsChinese, detectChineseTexts } from '../../utils/autoI18n';
 
 const AutoI18nDemo: React.FC = () => {
   const { language, setLanguage, isZh, isEn } = useI18n();

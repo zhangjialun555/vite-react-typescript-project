@@ -1,29 +1,59 @@
 import React from 'react'
+import { useAutoTranslation } from '../utils/autoI18n'
+import AutoTranslatedText from '../components/AutoTranslatedText'
 
 const Contact: React.FC = () => {
+  const { translate } = useAutoTranslation();
+
   return (
     <div className="page-container">
       <div className="content-area">
-        <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-6">联系我们</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">如果您有任何问题，请通过以下方式联系我们：</p>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+          <AutoTranslatedText>联系我们</AutoTranslatedText>
+        </h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg text-center border border-blue-200 dark:border-blue-700">
-            <div className="text-3xl mb-3">📧</div>
-            <h3 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-2">邮箱</h3>
-            <p className="text-blue-700 dark:text-blue-300">example@email.com</p>
+        <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+          {translate('如果您有任何问题，请通过以下方式联系我们：')}
+        </p>
+        
+        <div className="grid-responsive">
+          <div className="card">
+            <div className="card-header">
+              <h3 className="card-title">
+                <AutoTranslatedText>邮箱</AutoTranslatedText>
+              </h3>
+            </div>
+            <div className="card-body">
+              <p className="text-gray-600 dark:text-gray-400">
+                example@email.com
+              </p>
+            </div>
           </div>
           
-          <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg text-center border border-green-200 dark:border-green-700">
-            <div className="text-3xl mb-3">📞</div>
-            <h3 className="text-lg font-semibold text-green-800 dark:text-green-200 mb-2">电话</h3>
-            <p className="text-green-700 dark:text-green-300">123-456-7890</p>
+          <div className="card">
+            <div className="card-header">
+              <h3 className="card-title">
+                <AutoTranslatedText>电话</AutoTranslatedText>
+              </h3>
+            </div>
+            <div className="card-body">
+              <p className="text-gray-600 dark:text-gray-400">
+                123-456-7890
+              </p>
+            </div>
           </div>
           
-          <div className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg text-center border border-purple-200 dark:border-purple-700">
-            <div className="text-3xl mb-3">📍</div>
-            <h3 className="text-lg font-semibold text-purple-800 dark:text-purple-200 mb-2">地址</h3>
-            <p className="text-purple-700 dark:text-purple-300">某某市某某区</p>
+          <div className="card">
+            <div className="card-header">
+              <h3 className="card-title">
+                <AutoTranslatedText>地址</AutoTranslatedText>
+              </h3>
+            </div>
+            <div className="card-body">
+              <p className="text-gray-600 dark:text-gray-400">
+                {translate('某某市某某区')}
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 # React + TypeScript + Vite 项目
 
-一个现代化的React项目，集成了TypeScript、Tailwind CSS、React Router等功能。
+一个现代化的React项目，集成了TypeScript、Tailwind CSS、React Router、Ant Design等功能。
 
 ## ✨ 功能特性
 
@@ -9,6 +9,7 @@
 - 🔷 **TypeScript** - 类型安全的JavaScript
 - 🎨 **Tailwind CSS** - 实用优先的CSS框架
 - 🌐 **React Router** - 客户端路由
+- 🎨 **Ant Design** - 企业级UI组件库
 - 🌙 **暗黑模式** - 支持主题切换
 - 🌍 **国际化** - 中英文切换支持
 - 📱 **响应式设计** - 适配各种设备
@@ -20,6 +21,7 @@
 - **开发语言**: TypeScript
 - **构建工具**: Vite
 - **样式框架**: Tailwind CSS
+- **UI组件库**: Ant Design
 - **路由管理**: React Router
 - **状态管理**: React Context API
 - **包管理器**: npm
@@ -51,12 +53,20 @@ npm run preview
 ```
 src/
 ├── components/          # 通用组件
+│   ├── AutoTranslatedText.tsx  # 自动翻译组件
+│   ├── Navigation.tsx          # 导航组件
+│   └── ...
 ├── contexts/           # React Context
+│   ├── ThemeContext.tsx       # 主题上下文
+│   ├── I18nContext.tsx        # 国际化上下文
+│   └── LayoutContext.tsx      # 布局上下文
 ├── pages/              # 页面组件
 │   ├── About/          # About页面模块
-│   │   ├── components/ # About页面子组件
-│   │   └── index.tsx   # About页面主文件
-│   └── ...             # 其他页面
+│   ├── StyleGuide/     # 样式指南分类
+│   ├── Layout/         # 布局分类
+│   ├── AntDesign/      # Ant Design分类
+│   ├── Internationalization/ # 国际化分类
+│   └── ...
 ├── router/             # 路由配置
 ├── types/              # TypeScript类型定义
 ├── utils/              # 工具函数
@@ -66,25 +76,31 @@ src/
 
 ## 🌟 主要功能
 
-### 1. 页面导航
+### 1. 多级菜单导航
 - 首页 (Home)
 - 关于我们 (About)
 - 联系我们 (Contact)
-- 测试页面 (Test)
+- 样式指南 (StyleGuide)
+- 布局演示 (Layout)
+- Ant Design (AntDesign)
+- 国际化 (Internationalization)
 
 ### 2. 主题切换
 - 支持明暗主题切换
 - 主题状态持久化
+- Ant Design组件主题适配
 
 ### 3. 国际化
 - 支持中英文切换
 - 自动检测中文文本
 - 一键翻译功能
+- 完整的翻译覆盖
 
-### 4. 布局切换
-- 顶部导航栏
-- 左侧边栏
-- 响应式设计
+### 4. Ant Design集成
+- 完整的组件库集成
+- 暗黑模式支持
+- 按需导入优化
+- 主题定制功能
 
 ## 🎨 组件示例
 
@@ -136,6 +152,16 @@ const About: React.FC = () => {
   "type-check": "类型检查"
 }
 ```
+
+## 📚 文档
+
+项目所有文档都整理在 `docs/` 文件夹中：
+
+- **[文档索引](./docs/README.md)** - 所有文档的索引和导航
+- **[样式指南](./docs/STYLE_GUIDE.md)** - 样式系统使用指南
+- **[国际化指南](./docs/I18N_GUIDE.md)** - 国际化功能使用指南
+- **[Ant Design指南](./docs/ANTD_GUIDE.md)** - Ant Design集成指南
+- **[故障排除](./docs/ANTD_TROUBLESHOOTING.md)** - 常见问题解决方案
 
 ## 🤝 贡献指南
 
