@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { createPortal } from 'react-dom';
+
 import { useI18n } from '../contexts/I18nContext';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLayout } from '../contexts/LayoutContext';
@@ -19,7 +19,6 @@ import {
   GlobalOutlined,
   MenuOutlined,
   HomeFilled,
-  DownOutlined,
   UpOutlined,
   SettingOutlined,
   TranslationOutlined,
